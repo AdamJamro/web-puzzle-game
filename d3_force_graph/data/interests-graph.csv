@@ -1,0 +1,175 @@
+interestA,interestB,weight
+"Artificial Intelligence","Internet of Things",0.6
+"Artificial Intelligence","Machine Learning",0.9
+"Artificial Intelligence","Deep Learning",0.8
+"Artificial Intelligence","Cloud Computing",0.7
+"Artificial Intelligence","Natural Language Processing",0.7
+"Artificial Intelligence","Robotics",0.5
+"Artificial Intelligence","Computer Vision",0.6
+"Artificial Intelligence","Data Science",0.9
+"Artificial Intelligence","Cybersecurity",0.4
+"Artificial Intelligence","Blockchain",0.55
+"Machine Learning","Deep Learning",0.85
+"Machine Learning","Cloud Computing",0.75
+"Machine Learning","Internet of Things",0.65
+"Machine Learning","Natural Language Processing",0.75
+"Machine Learning","Blockchain",0.6
+"Machine Learning","Computer Vision",0.65
+"Machine Learning","Robotics",0.55
+"Machine Learning","Cybersecurity",0.45
+"Machine Learning","Data Science",0.85
+"Natural Language Processing","Computer Vision",0.55
+"Natural Language Processing","Cloud Computing",0.65
+"Natural Language Processing","Data Science",0.75
+"Natural Language Processing","Internet of Things",0.55
+"Natural Language Processing","Robotics",0.45
+"Natural Language Processing","Blockchain",0.5
+"Natural Language Processing","Cybersecurity",0.35
+"Deep Learning","Natural Language Processing",0.8
+"Deep Learning","Computer Vision",0.7
+"Deep Learning","Blockchain",0.65
+"Deep Learning","Cloud Computing",0.8
+"Deep Learning","Internet of Things",0.7
+"Deep Learning","Cybersecurity",0.5
+"Deep Learning","Robotics",0.6
+"Deep Learning","Data Science",0.8
+"Computer Vision","Robotics",0.5
+"Computer Vision","Cybersecurity",0.4
+"Computer Vision","Cloud Computing",0.7
+"Computer Vision","Blockchain",0.55
+"Computer Vision","Internet of Things",0.6
+"Computer Vision","Data Science",0.7
+"Robotics","Data Science",0.65
+"Robotics","Cybersecurity",0.3
+"Robotics","Cloud Computing",0.6
+"Robotics","Internet of Things",0.5
+"Robotics","Blockchain",0.45
+"Data Science","Cybersecurity",0.5
+"Data Science","Blockchain",0.6
+"Data Science","Internet of Things",0.65
+"Data Science","Cloud Computing",0.75
+"Cloud Computing","Internet of Things",0.65
+"Blockchain","Internet of Things",0.55
+"Blockchain","Cloud Computing",0.65
+"Cybersecurity","Blockchain",0.5
+"Cybersecurity","Cloud Computing",0.55
+"Cybersecurity","Internet of Things",0.45
+"Optimization","Artificial Intelligence",0.8
+"Optimization","Machine Learning",0.75
+"Optimization","Deep Learning",0.7
+"Optimization","Natural Language Processing",0.65
+"Optimization","Computer Vision",0.7
+"Optimization","Robotics",0.6
+"Optimization","Data Science",0.75
+"Differential Equations","Artificial Intelligence",0.7
+"Differential Equations","Machine Learning",0.65
+"Differential Equations","Deep Learning",0.6
+"Differential Equations","Natural Language Processing",0.55
+"Differential Equations","Computer Vision",0.6
+"Differential Equations","Robotics",0.5
+"Differential Equations","Data Science",0.65
+"Differential Equations","Cybersecurity",0.45
+"Differential Equations","Blockchain",0.55
+"Differential Equations","Cloud Computing",0.65
+"Differential Equations","Internet of Things",0.55
+"Linear Algebra","Artificial Intelligence",0.85
+"Linear Algebra","Machine Learning",0.8
+"Linear Algebra","Deep Learning",0.75
+"Linear Algebra","Natural Language Processing",0.7
+"Linear Algebra","Computer Vision",0.75
+"Linear Algebra","Robotics",0.65
+"Linear Algebra","Data Science",0.8
+"Linear Algebra","Cybersecurity",0.6
+"Linear Algebra","Blockchain",0.7
+"Linear Algebra","Cloud Computing",0.75
+"Linear Algebra","Internet of Things",0.65
+"Linear Algebra","Optimization",0.8
+"Statistics","Artificial Intelligence",0.9
+"Statistics","Machine Learning",0.85
+"Statistics","Deep Learning",0.8
+"Statistics","Natural Language Processing",0.75
+"Statistics","Computer Vision",0.8
+"Statistics","Robotics",0.7
+"Statistics","Data Science",0.85
+"Statistics","Cybersecurity",0.65
+"Statistics","Blockchain",0.75
+"Statistics","Cloud Computing",0.8
+"Statistics","Internet of Things",0.7
+"Statistics","Optimization",0.85
+"Statistics","Differential Equations",0.75
+"Category Theory","Artificial Intelligence",0.3
+"Category Theory","Machine Learning",0.4
+"Category Theory","Deep Learning",0.2
+"Category Theory","Natural Language Processing",0.25
+"Category Theory","Computer Vision",0.3
+"Category Theory","Robotics",0.2
+"Category Theory","Data Science",0.4
+"Category Theory","Cybersecurity",0.15
+"Category Theory","Blockchain",0.25
+"Category Theory","Cloud Computing",0.3
+"Category Theory","Internet of Things",0.2
+"Category Theory","Optimization",0.25
+"Category Theory","Differential Equations",0.2
+"Category Theory","Linear Algebra",0.4
+"Category Theory","Statistics",0.3
+"Frontend Development","Artificial Intelligence",0.1
+"Frontend Development","Machine Learning",0.1
+"Frontend Development","Deep Learning",0.1
+"Frontend Development","Natural Language Processing",0.1
+"Frontend Development","Computer Vision",0.3
+"Frontend Development","Robotics",0.2
+"Frontend Development","Data Science",0.2
+"Music Theory","Artificial Intelligence",0.1
+"Music Theory","Machine Learning",0.1
+"Music Theory","Deep Learning",0.1
+"Music Theory","Natural Language Processing",0.1
+"Music Theory","Computer Vision",0.1
+"Music Theory","Robotics",0.1
+"Music Theory","Data Science",0.1
+"Music Theory","Cybersecurity",0.1
+"Music Theory","Blockchain",0.1
+"Music Theory","Cloud Computing",0.1
+"Music Theory","Internet of Things",0.1
+"Music Theory","Optimization",0.1
+"Music Theory","Differential Equations",0.1
+"Music Theory","Linear Algebra",0.1
+"Music Theory","Statistics",0.1
+"Music Theory","Category Theory",0.1
+"Music Theory","Frontend Development",0.1
+"Music Theory","Backend Development",0.1
+"Music Theory","Full Stack Development",0.1
+"Piano playing", "Artificial Intelligence",0.01
+"Piano playing", "Machine Learning",0.01
+"Piano playing", "Deep Learning",0.01
+"Piano playing", "Natural Language Processing",0.01
+"Piano playing", "Computer Vision",0.01
+"Piano playing", "Robotics",0.01
+"Piano playing", "Data Science",0.01
+"Piano playing", "Cybersecurity",0.01
+"Piano playing", "Blockchain",0.01
+"Piano playing", "Cloud Computing",0.01
+"Piano playing", "Internet of Things",0.01
+"Piano playing", "Optimization",0.01
+"Piano playing", "Differential Equations",0.01
+"Piano playing", "Linear Algebra",0.01
+"Piano playing", "Statistics",0.01
+"Piano playing", "Category Theory",0.01
+"Piano playing", "Frontend Development",0.01
+"Piano playing", "Backend Development",0.01
+"Piano playing", "Full Stack Development",0.01
+"Piano playing", "Music Theory",0.5
+"Full Stack Development", "Artificial Intelligence",0.1
+"Full Stack Development", "Backend Development",0.6
+"Full Stack Development", "Frontend Development",0.6
+"Full Stack Development", "Machine Learning",0.1
+"Full Stack Development", "Deep Learning",0.1
+"Full Stack Development", "Natural Language Processing",0.1
+"Full Stack Development", "Computer Vision",0.1
+"Full Stack Development", "Robotics",0.1
+"Full Stack Development", "Data Science",0.1
+"Full Stack Development", "Cybersecurity",0.1
+"Full Stack Development", "Blockchain",0.1
+"Full Stack Development", "Cloud Computing",0.1
+"Full Stack Development", "Internet of Things",0.1
+"Full Stack Development", "Optimization",0.1
+

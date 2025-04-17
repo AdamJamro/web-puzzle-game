@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adam Jamroziński | Programming Portfolio</title>
+<!--  <script src="https://d3js.org/d3.v7.min.js"></script>-->
+  <script type="module" src="app.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+<div id="app">
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <a href="#home-page" class="logo-href">Adam Jamroziński</a>
+      </div>
+      <ul class="nav-menu desktop-only">
+        <li><a href="#home-page" class="active nav-link" id="home-link">Home</a></li>
+        <li><a href="#interests-page" class="nav-link" id="interests-link">Interests</a></li>
+        <li><a href="#interests-graph-page" class="nav-link" id="interests-graph-link">Interests Graph</a></li>
+        <li><a href="#projects-page" class="nav-link" id="projects-link">Projects</a></li>
+        <li><a href="#numbers-page" class="nav-link" id="numbers-link">MNIST</a></li>
+      </ul>
+      <div class="hamburger mobile-only">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <div class="hamburger-menu mobile-only" >
+    <ul>
+      <li><a href="#home-page" class="active nav-link" id="home-link">Home</a></li>
+      <li><a href="#interests-page" class="nav-link" id="interests-link">Interests</a></li>
+      <li><a href="#interests-graph-page" class="nav-link" id="interests-graph-link">Interests Graph</a></li>
+      <li><a href="#projects-page" class="nav-link" id="projects-link">Projects</a></li>
+      <li><a href="#numbers-page" class="nav-link" id="numbers-link">MNIST</a></li>
+    </ul>
+  </div>
+
+
+
+  <div class="overlay"></div>
+
+  <div id="app-view">
+    <div id="home-page" class="page">
+      <div class="container">
+        <section class="main">
+          <div class="hero-border-wrap">
+            <div class="hero">
+              <div class="hero-image">
+<!--                <img src="./res/hero_cropped.jpg" alt="Adam Jamroziński">-->
+              </div>
+              <div class="hero-content">
+                <h1>Adam Jamroziński</h1>
+                <p>Undergraduate Computer Science Student | Full-Stack Developer | AI Enthusiast</p>
+                <p>I'm a third-year CS student passionate about building innovative software solutions and exploring emerging technologies.</p>
+                <div class="social-links">
+                  <a href="" title="GitHub">GitHub</a>
+                  <a href="#" title="LinkedIn">LinkedIn</a>
+                  <a href="#" title="Twitter">Twitter</a>
+                  <a href="#" title="Email">Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <h2>Dashboard</h2>
+        <section class="dashboard">
+          <div class="dashboard-card">
+            <h3>Technical Skills</h3>
+            <p>Languages: Python, JavaScript, Java, C++</p>
+            <p>Web: React, Node.js, Express, HTML/CSS</p>
+            <p>Tools: Git, Docker, AWS, Firebase</p>
+            <p>Database: MongoDB, PostgreSQL, MySQL</p>
+          </div>
+          <div class="dashboard-card">
+            <h3>Education</h3>
+            <p><strong>BSc in Computer Science</strong></p>
+            <p>University of Technology</p>
+            <p>Expected Graduation: May 2025</p>
+            <p>GPA: 3.8/4.0</p>
+          </div>
+          <div class="dashboard-card">
+            <h3>Recent Achievements</h3>
+            <p>🏆 2nd Place, University Hackathon 2024</p>
+            <p>📝 Published research paper on ML optimization</p>
+            <p>🚀 Internship at TechCorp (Summer 2024)</p>
+          </div>
+        </section>
+
+        <section class="projects">
+          <h2>Featured Projects</h2>
+          <div class="project-card">
+            <h3>Smart Campus Navigator</h3>
+            <div class="tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <p>A mobile application that helps students navigate campus facilities, find study spaces, and connect with peers for group projects.</p>
+          </div>
+          <div class="project-card">
+            <h3>Algorithmic Trading Bot</h3>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">API Integration</span>
+            </div>
+            <p>Developed a trading algorithm that analyzes market trends and executes trades automatically based on predefined strategies.</p>
+          </div>
+          <div class="project-card">
+            <h3>Sustainable Energy Dashboard</h3>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">Express</span>
+            </div>
+            <p>Interactive visualization of renewable energy usage across campus buildings, helping the university track and optimize energy consumption.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+    <div id="interests-page" class="page">
+      <div class="container">
+        <h1>My Interests</h1>
+        <p>Beyond coding, I'm passionate about various technology fields and hobbies that help me grow as a developer and as a person.</p>
+
+        <div class="interests-container">
+          <div class="interest-column">
+            <h2>Technical Interests</h2>
+            <div class="interest-card">
+              <h3>Artificial Intelligence & Machine Learning</h3>
+              <p>I'm fascinated by how AI can solve complex problems. Currently exploring reinforcement learning and its applications in robotics.</p>
+            </div>
+            <div class="interest-card">
+              <h3>Full-Stack Web Development</h3>
+              <p>Building seamless web experiences using modern frameworks and technologies. Particularly interested in serverless architectures and microservices.</p>
+            </div>
+            <div class="interest-card">
+              <h3>Cybersecurity</h3>
+              <p>Learning about ethical hacking, secure coding practices, and network security. Participated in several CTF competitions.</p>
+            </div>
+            <div class="interest-card">
+              <h3>DevOps & Cloud Computing</h3>
+              <p>Exploring CI/CD pipelines, infrastructure as code, and cloud platforms like AWS and Google Cloud.</p>
+            </div>
+          </div>
+
+          <div class="interest-column">
+            <h2>Personal Interests</h2>
+            <div class="interest-card">
+              <h3>Competitive Programming</h3>
+              <p>Regular participant in coding competitions on LeetCode and Codeforces to improve my algorithmic thinking and problem-solving skills.</p>
+            </div>
+            <div class="interest-card">
+              <h3>Open Source Contribution</h3>
+              <p>Actively contributing to open source projects, particularly those focused on education and accessibility.</p>
+            </div>
+            <div class="interest-card">
+              <h3>Photography & Digital Art</h3>
+              <p>Finding the balance between technology and creativity through photography and digital design. Sometimes I create custom graphics for my coding projects.</p>
+            </div>
+            <div class="interest-card">
+              <h3>Hiking & Outdoor Activities</h3>
+              <p>Getting away from the screen to reconnect with nature helps me maintain a healthy work-life balance and often inspires new project ideas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects-page" class="page">
+      <div class="container">
+        <h1>Project Portfolio</h1>
+        <p>Here's a comprehensive list of my software development projects, showcasing my technical skills and problem-solving approach.</p>
+
+        <h2>Web Development Projects</h2>
+        <div class="project-card">
+          <h3>Student Collaboration Platform</h3>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">WebRTC</span>
+          </div>
+          <p>A platform that enables students to collaborate on projects in real-time with video conferencing, shared documents, and task management.</p>
+          <p><strong>Key Features:</strong> Real-time document editing, video chat integration, project milestone tracking</p>
+          <p><strong>Outcome:</strong> Adopted by three university departments for group assignments, serving over 300 active users.</p>
+          <p>The most heavy part of the code runtime was:</p>
+          <pre><code>def superior_sort(array):
+    while not is_sorted(array):
+        random.shuffle(array)</code></pre>
+        </div>
+
+        <div class="project-card">
+          <h3>E-Commerce Dashboard for Local Businesses</h3>
+          <div class="tags">
+            <span class="tag">Angular</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <p>Developed a customizable e-commerce platform for small local businesses to establish online presence during the pandemic.</p>
+          <p><strong>Key Features:</strong> Inventory management, order processing, analytics dashboard, payment integration</p>
+          <p><strong>Outcome:</strong> Helped five local businesses increase their revenue by an average of 30%.</p>
+        </div>
+
+        <h2>Mobile Applications</h2>
+        <div class="project-card">
+          <h3>Campus Events Finder</h3>
+          <div class="tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">Google Maps API</span>
+          </div>
+          <p>Cross-platform mobile app that helps students discover events happening on campus based on their interests and location.</p>
+          <p><strong>Key Features:</strong> Location-based event discovery, personalized recommendations, event check-in system</p>
+          <p><strong>Outcome:</strong> Over 2,000 downloads within the first month of launch, featured in university newsletter.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Fitness Tracking App</h3>
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">GraphQL</span>
+          </div>
+          <p>A mobile application that helps users track workouts, nutrition, and progress towards fitness goals.</p>
+          <p><strong>Key Features:</strong> Custom workout plans, nutrition tracking, progress visualization, social sharing</p>
+          <p><strong>Outcome:</strong> Developed as part of a startup incubator program, currently in beta testing with 500 users.</p>
+        </div>
+
+        <h2>Data Science & AI Projects</h2>
+        <div class="project-card">
+          <h3>Predictive Maintenance System</h3>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">IoT</span>
+          </div>
+          <p>Machine learning model that predicts equipment failures in manufacturing environments based on sensor data.</p>
+          <p><strong>Key Features:</strong> Anomaly detection, predictive alerts, maintenance scheduling recommendations</p>
+          <p><strong>Outcome:</strong> Research collaboration with the Engineering department, reduced maintenance costs by 15% in pilot implementation.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Natural Language Course Recommender</h3>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">NLTK</span>
+            <span class="tag">FastAPI</span>
+          </div>
+          <p>NLP-based system that recommends university courses based on student interests expressed in natural language.</p>
+          <p><strong>Key Features:</strong> Semantic analysis, personalized course recommendations, integration with university catalog</p>
+          <p><strong>Outcome:</strong> Improved course selection process for incoming freshmen, 85% satisfaction rate in user survey.</p>
+        </div>
+
+        <div class="pagination">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">Next &raquo;</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="interests-graph-page" class="page">
+      <h1>Animal Relationship Network</h1>
+      <p>An interactive visualization of genetic relatedness between big cats. Links represent genetic similarity with thickness indicating relationship strength. Drag nodes to reposition. Use the slider to filter relationships by strength.</p>
+
+      <div class="control-panel">
+        <div class="slider-container">
+          <label for="threshold">Filter Relatedness (Minimum: <span id="threshold-value">0.7</span>)</label>
+          <input type="range" id="threshold" min="0.7" max="0.95" step="0.05" value="0.7">
+        </div>
+      </div>
+
+      <svg id="graph"></svg>
+
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #e74c3c;"></div>
+          <span>Lion</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #3498db;"></div>
+          <span>Tiger</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #2ecc71;"></div>
+          <span>Leopard</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #f39c12;"></div>
+          <span>Cheetah</span>
+        </div>
+      </div>
+
+      <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <div id="numbers-page" class="page">
+      <h1>MNIST Handwritten Digits - Lazy Loading</h1>
+
+      <div class="controls">
+        <div class="digit-filter">
+          <span>Filter by digit:</span>
+          <div class="digit-buttons">
+            <button class="digit-btn active" data-digit="all">All</button>
+            <button class="digit-btn" data-digit="0">0</button>
+            <button class="digit-btn" data-digit="1">1</button>
+            <button class="digit-btn" data-digit="2">2</button>
+            <button class="digit-btn" data-digit="3">3</button>
+            <button class="digit-btn" data-digit="4">4</button>
+            <button class="digit-btn" data-digit="5">5</button>
+            <button class="digit-btn" data-digit="6">6</button>
+            <button class="digit-btn" data-digit="7">7</button>
+            <button class="digit-btn" data-digit="8">8</button>
+            <button class="digit-btn" data-digit="9">9</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="digits-container"></div>
+
+      <div class="loader" id="loader">Loading more digits...</div>
+      <div id="loader-status">Loaded 0 images</div>
+
+      <button class="load-more" id="load-more-btn">Load More Images</button>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Adam Jam. All rights reserved.</p>
+  </footer>
+</div>
+
+<noscript>
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="logo">Adam Jamroziński</a>
+        <ul class="nav-menu">
+          <li><a href="noscript_pages/home_page.html" target="content-frame" class="active" id="home-link-noscript">Home</a></li>
+          <li><a href="noscript_pages/interests_page.html" target="content-frame" class="active" id="interests-link-noscript">Interests</a></li>
+          <li><a href="noscript_pages/projects_page.html" target="content-frame" class="active" id="projects-link-noscript">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="frame-container">
+    <iframe class="frame-content" name="content-frame" src="noscript_pages/home_page.html"></iframe>
+  </div>
+  <footer>
+    <p>&copy; 2025 Adam Jam. All rights reserved.</p>
+  </footer>
+</noscript>
+
+
+</body>
+</html>

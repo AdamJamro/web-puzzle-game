@@ -1,0 +1,108 @@
+@use "sass:map";
+@use "sass:math";
+
+@function random-value-from-map($map) {
+  $keys: map.keys($map);
+  $random-key: nth($keys, math.random(length($keys)));
+  @return map.get($map, $random-key);
+}
+
+$hero-color-palette: (
+  pinkish: #BA7699,
+  cloudish: #FBD0CD,
+  blueish: #114EC8,
+  blueish2: #0650C2,
+);
+
+$font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-code: 'Courier New', monospace;
+
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$accent-color: #e74c3c;
+$light-color: #fcfaf1;
+$dim-color: #f1e3e7;
+$dark-color: #2c3e50;
+$background-color: rgb(2,0,36);
+$text-color: #333;
+$text-bright-color: $light-color;
+$header-color: $light-color;
+$small-header-color: $dim-color;
+$shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$hero-gradient: linear-gradient(40deg, rgba(2,20,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+$hero-image: url('../res/hero_background.png');
+$hero-border-gradient: linear-gradient(to right, purple, white);
+$background-dark-gradient: linear-gradient(to right,
+  $secondary-color,
+  rgba(2,20,36,1) 0%,
+  rgba(9,9,121,1) 35%,
+  rgba(2,20,36,1) 100%,
+  $secondary-color
+);
+$card-light-background-gradient: linear-gradient(to right, $light-color, $dim-color);
+$card-dark-background-gradient: linear-gradient(to right,
+  $secondary-color,
+  rgba(2,20,36,1) 0%,
+  $background-color,
+  rgba(2,20,36,1) 100%,
+  $secondary-color
+);
+$card-hovered-dark-background-gradient: linear-gradient(to right,
+  rgba(2,20,36,1) 0%,
+  rgba(9,9,121,1) 30%,
+  rgba(9,9,121,1) 60%,
+  rgba(2,20,36,1) 100%,
+);
+$circular-gradient: repeating-radial-gradient(circle,
+  map.get($hero-color-palette, pinkish) 0.5px,
+  map.get($hero-color-palette, cloudish) 0.5px,
+  map.get($hero-color-palette, pinkish) 0.5px,
+  map.get($hero-color-palette, cloudish) 1px,
+  map.get($hero-color-palette, blueish) 1px,
+  map.get($hero-color-palette, blueish2) 1.5px,
+  map.get($hero-color-palette, blueish) 1.5px,
+  map.get($hero-color-palette, blueish2) 2px
+);
+
+
+$nav-gradient:  radial-gradient(circle,
+  map.get($hero-color-palette, pinkish) 0.5px,
+  map.get($hero-color-palette, pinkish) 0.5px,
+  map.get($hero-color-palette, cloudish) 0.5px,
+  map.get($hero-color-palette, cloudish) 1px,
+  map.get($hero-color-palette, blueish) 1px,
+  map.get($hero-color-palette, blueish) 1.5px,
+  map.get($hero-color-palette, blueish2) 1.5px,
+  map.get($hero-color-palette, blueish2) 2px
+);
+
+$wide-screen-breakpoint: 1024px;
+$header-height: min(max(8vh, 50px), 250px);
+$max-hero-height: 80vh;
+$min-hero-width: 270px;
+
+$breakpoints: (
+  small: 450px,
+  medium: 600px,
+  large: 900px,
+);
+
+@mixin minScreenSize($screen-size-breakpoint) {
+  @if map.has-key($breakpoints, $screen-size-breakpoint) {
+    @media only screen and (min-width: map.get($breakpoints, $screen-size-breakpoint) + 1px) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$screen-size-breakpoint}";
+  }
+}
+
+@mixin maxScreenSize($screen-size-breakpoint) {
+  @if map.has-key($breakpoints, $screen-size-breakpoint) {
+    @media only screen and (max-width: map.get($breakpoints, $screen-size-breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$screen-size-breakpoint}";
+  }
+}
