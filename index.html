@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adam Jamroziński | Programming Portfolio</title>
 <!--  <script src="https://d3js.org/d3.v7.min.js"></script>-->
+  <link rel="stylesheet" href="/prism/prism.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="text/javascript" src="prism/prism.js"></script>
   <script type="module" src="app.js"></script>
-  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -23,6 +25,7 @@
         <li><a href="#interests-graph-page" class="nav-link" id="interests-graph-link">Interests Graph</a></li>
         <li><a href="#projects-page" class="nav-link" id="projects-link">Projects</a></li>
         <li><a href="#numbers-page" class="nav-link" id="numbers-link">MNIST</a></li>
+        <li><a href="#game-page" class="nav-link" id="game-link">Puzzle Game</a></li>
       </ul>
       <div class="hamburger mobile-only">
         <span class="bar"></span>
@@ -31,13 +34,14 @@
       </div>
     </nav>
   </header>
-  <div class="hamburger-menu mobile-only" >
+  <div class="hamburger-menu" >
     <ul>
-      <li><a href="#home-page" class="active nav-link" id="home-link">Home</a></li>
+      <li><a href="#home-page" class="nav-link" id="home-link">Home</a></li>
       <li><a href="#interests-page" class="nav-link" id="interests-link">Interests</a></li>
       <li><a href="#interests-graph-page" class="nav-link" id="interests-graph-link">Interests Graph</a></li>
       <li><a href="#projects-page" class="nav-link" id="projects-link">Projects</a></li>
       <li><a href="#numbers-page" class="nav-link" id="numbers-link">MNIST</a></li>
+      <li><a href="#game-page" class="nav-link" id="game-link">Puzzle Game</a></li>
     </ul>
   </div>
 
@@ -192,7 +196,7 @@
           <p><strong>Key Features:</strong> Real-time document editing, video chat integration, project milestone tracking</p>
           <p><strong>Outcome:</strong> Adopted by three university departments for group assignments, serving over 300 active users.</p>
           <p>The most heavy part of the code runtime was:</p>
-          <pre><code>def superior_sort(array):
+          <pre><code class="language-python">def superior_sort(array):
     while not is_sorted(array):
         random.shuffle(array)</code></pre>
         </div>
@@ -328,13 +332,40 @@
       <div id="digits-container"></div>
 
       <div class="loader" id="loader">Loading more digits...</div>
+      <div class="error-text" id="loader-error-text"></div>
       <div id="loader-status">Loaded 0 images</div>
 
+      <div style="display: flex; justify-content: center">
+        <div class="progress-bar-container" id="loader-progress-bars-container"></div>
+      </div>
       <button class="load-more" id="load-more-btn">Load More Images</button>
     </div>
 
+    <div id="game-page" class="page">
+      <h1>Sliding Puzzle Game</h1>
+      <div id="puzzle-game-container">
+        <div id="puzzle-game-frame">
+          <canvas id="puzzle-canvas" width="300" height="300"></canvas>
+          <div id="puzzle-game-controls">
+            <h3 id="controls-caption">Control Panel</h3>
+            <div class="group-control-container">
+              <span>Adjust grid size:</span>
+              <div class="plus-minus-button-container">
+                <button type="button" id="minusButton">-</button>
+                <button type="button" id="plusButton">+</button>
+              </div>
+            </div>
+            <button type="button" id="shuffleButton">Shuffle</button>
+            <button type="button" id="solveButton">Solve</button>
+          </div>
+        </div>
+        <div class="move-counter">Moves: <span id="moveCount">0</span></div>
+      </div>
+
+    </div>
   </div>
 
+  <div class="spacer"></div>
   <footer>
     <p>&copy; 2025 Adam Jam. All rights reserved.</p>
   </footer>

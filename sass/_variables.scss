@@ -23,9 +23,13 @@ $accent-color: #e74c3c;
 $light-color: #fcfaf1;
 $dim-color: #f1e3e7;
 $dark-color: #2c3e50;
+$game-tile-primary-color: #aa2255; // REQUIRES MANUAL SYNC!
+$game-tile-secondary-color: #a02141; // REQUIRES MANUAL SYNC!
 $background-color: rgb(2,0,36);
+$error-color: #e74c3c;
 $text-color: #333;
 $text-bright-color: $light-color;
+$text-error-color: $error-color;
 $header-color: $light-color;
 $small-header-color: $dim-color;
 $shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
