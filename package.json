@@ -20,6 +20,7 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
+    "async-mutex": "^0.5.0",
     "d3": "^7.9.0",
     "d3-drag": "^3.0.0",
     "d3-fetch": "^3.0.1",
