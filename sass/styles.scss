@@ -85,6 +85,11 @@ h1 {
   color: var.$header-color;
 }
 
+.page-title {
+  font-size: 2.6rem;
+  margin: 5px 15px;
+}
+
 
 
 h2 {
@@ -165,15 +170,17 @@ pre.language-python {
     //border: 2px solid darkblue;
     box-shadow: var.$shadow;
 
-    width: 80vw;
-    height: 80vw;
+    width: 80vmin;
+    height: 80vmin;
     @include var.minScreenSize(medium) {
-      width: 60vw;
-      height: 60vw;
+      margin: 5px;
+      width: 60vmin;
+      height: 60vmin;
     }
     @include var.minScreenSize(large) {
-      width: 35vw;
-      height: 35vw;
+      margin: 15px;
+      width: 35vmin;
+      height: 35vmin;
     }
   }
 }
@@ -618,7 +625,9 @@ input[type="range"] {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 10px;
-  margin-top: 20px;
+  margin: 10px;
+  //margin-left: 10px;
+  //margin-right: 10px;
 }
 .digit-item {
   background: black;

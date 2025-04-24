@@ -40,12 +40,12 @@ body {
   margin: 0 auto;
   padding: 10px 15px;
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 721px) {
   .container {
     padding: 12px 17px;
   }
 }
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 1001px) {
   .container {
     padding: 15px 20px;
   }
@@ -69,6 +69,11 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #fcfaf1;
+}
+
+.page-title {
+  font-size: 2.6rem;
+  margin: 5px 15px;
 }
 
 h2 {
@@ -127,7 +132,7 @@ pre.language-python {
   gap: 20px;
   min-width: 270px;
 }
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 1001px) {
   .hero * {
     max-height: 80vh;
   }
@@ -145,19 +150,21 @@ pre.language-python {
   margin: 3px;
   object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 80vw;
-  height: 80vw;
+  width: 80vmin;
+  height: 80vmin;
 }
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 721px) {
   .hero-image img {
-    width: 60vw;
-    height: 60vw;
+    margin: 5px;
+    width: 60vmin;
+    height: 60vmin;
   }
 }
-@media only screen and (min-width: 901px) {
+@media only screen and (min-width: 1001px) {
   .hero-image img {
-    width: 35vw;
-    height: 35vw;
+    margin: 15px;
+    width: 35vmin;
+    height: 35vmin;
   }
 }
 
@@ -585,7 +592,7 @@ input[type=range] {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 10px;
-  margin-top: 20px;
+  margin: 10px;
 }
 
 .digit-item {
@@ -789,13 +796,13 @@ footer > * {
   height: 78vh;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   .desktop-only {
     display: none;
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 721px) {
   .mobile-only {
     display: none;
   }

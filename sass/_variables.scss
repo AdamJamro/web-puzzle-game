@@ -87,8 +87,8 @@ $min-hero-width: 270px;
 
 $breakpoints: (
   small: 450px,
-  medium: 600px,
-  large: 900px,
+  medium: 720px,
+  large: 1000px,
 );
 
 @mixin minScreenSize($screen-size-breakpoint) {

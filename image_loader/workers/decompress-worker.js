@@ -1,21 +1,14 @@
-// decompress-worker.js
 importScripts('https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js');
 
 let controller = null;
 let id = 'undefined';
 let taskCaption = 'undefined';
-// let onUpdateCallback = null;
-// let onFinishCallback = null;
 
 function sendMsg(message) {
-    // if (onUpdateCallback && message.type === 'progress') {
-    //     onUpdateCallback(message.percent);
-    // } else {
-    // }
     self.postMessage({
-        ...message,
         workerId: id,
         taskCaption: taskCaption,
+        ...message,
     });
 }
 
@@ -44,7 +37,7 @@ self.onmessage = async function(e) {
 };
 
 function calculateProgress(currentProgress, ratio, contribution) {
-    return Math.min(currentProgress + Math.round(ratio * contribution), 100);
+    return Math.min(currentProgress + Math.ceil(ratio * contribution), 100);
 }
 
 async function fetchAndDecompress(url) {
@@ -56,7 +49,7 @@ async function fetchAndDecompress(url) {
         let progressSnapshot = 0;
 
         // Fetch the file
-        sendMsg({ type: 'progress', status: 'fetching...', percent: 1 });
+        sendMsg({ type: 'progress', status: 'fetching...', percent: 0 });
         const response = await fetch(url, { signal: controller.signal });
 
         // Get total size if available
@@ -85,16 +78,15 @@ async function fetchAndDecompress(url) {
             loaded += value.length;
 
             // Report progress if we know the total size
-            if (totalSize) {
+            if (totalSize && Math.random() < 0.1) { // Randomly report progress to avoid overwhelming the UI
                 sendMsg({
                     type: 'progress',
                     status: 'Reading...',
                     percent: calculateProgress(progressSnapshot, loaded / totalSize, readerProgressPercentageContribution),
                 });
 
-
                 // allow UI to update
-                await new Promise(resolve => setTimeout(resolve, 10));
+                // setTimeout( () => {}, 5);
             }
         }
 
@@ -122,22 +114,25 @@ async function fetchAndDecompress(url) {
             inflate.push(chunk, false);
             offset += chunk.length;
 
-            // Report progress
-            sendMsg({
-                type: 'progress',
-                status: 'Decompressing...',
-                percent: calculateProgress(progressSnapshot, offset / combinedBuffer.length, decompressProgressPercentageContribution)
-            });
+            if (Math.random() < 0.1) { // Randomly report progress to avoid overwhelming the UI
+                // Report progress
+                sendMsg({
+                    type: 'progress',
+                    status: 'Decompressing...',
+                    percent: calculateProgress(progressSnapshot, offset / combinedBuffer.length, decompressProgressPercentageContribution)
+                    // percent: 100,
+                });
+            }
 
             // allow UI to update
-            await new Promise(resolve => setTimeout(resolve, 10));
+            // setTimeout(() => {}, 5);
 
             if (inflate.err) {
                 console.error('Decompression failed');
             }
         }
-        progressSnapshot = calculateProgress(progressSnapshot, 1, decompressProgressPercentageContribution)
-        sendMsg({ type: 'progress', percent: progressSnapshot, status: 'Collecting results...' });
+        // progressSnapshot = calculateProgress(progressSnapshot, 1, decompressProgressPercentageContribution)
+        // sendMsg({ type: 'progress', percent: progressSnapshot, status: 'Collecting results...' });
         // Convert to intended format (assuming JSON in this example)
         // const textDecoder = new TextDecoder('utf-8');
         // const jsonString = textDecoder.decode(decompressed);
