@@ -1,5 +1,5 @@
 # Javascript webapp project
-This is a record of miscellaneous javascript apps I've programmed at Uni.
+This is a record of javascript apps I've programmed at Uni.
 
 
 #### developed using vite
